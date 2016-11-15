@@ -6,6 +6,8 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @author 李智
  * @date 2016/11/13
+ *
+ * 生产消费者
  */
 class Resourse {
     private String name;

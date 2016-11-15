@@ -3,6 +3,8 @@ package main.thread;
 /**
  * @author 李智
  * @date 2016/11/6
+ *
+ * 线程测试
  */
 public class test_1 implements Runnable{
     public  test_1(){

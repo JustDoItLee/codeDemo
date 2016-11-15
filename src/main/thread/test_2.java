@@ -3,6 +3,8 @@ package main.thread;
 /**
  * @author 李智
  * @date 2016/11/6
+ *
+ * 输出测试
  */
 public class test_2 {
     public static void main(String[] args) {
