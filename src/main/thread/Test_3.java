@@ -73,7 +73,7 @@ class Consumer implements Runnable {
     }
 }
 
-public class test_3 {
+public class Test_3 {
     /**
      * @param args
      */

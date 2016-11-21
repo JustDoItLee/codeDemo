@@ -6,8 +6,8 @@ package main.thread;
  *
  * 线程测试
  */
-public class test_1 implements Runnable{
-    public  test_1(){
+public class Test_1 implements Runnable{
+    public Test_1(){
         System.out.println("start!");
     }
     public void run() {

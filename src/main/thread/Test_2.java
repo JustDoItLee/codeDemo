@@ -6,7 +6,7 @@ package main.thread;
  *
  * 输出测试
  */
-public class test_2 {
+public class Test_2 {
     public static void main(String[] args) {
         System.out.println(Thread.currentThread().getName());
         for (int i = 0; i < 10; i++) {

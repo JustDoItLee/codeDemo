@@ -6,10 +6,10 @@ package main.thread;
  *
  * test
  */
-public class test_main {
+public class Test_main {
     public static void main(String[] args) {
         for (int i = 0; i < 3; i++) {
-            test_1 test_1 = new test_1();
+            Test_1 test_1 = new Test_1();
             Thread t1 = new Thread(test_1);
             t1.start();
             System.out.println("end!");
