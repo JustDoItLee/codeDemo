@@ -27,4 +27,27 @@
         });
     })
 </script>
+
+<script>
+    //手动对比缓存
+    var cacheData, submitData, submitUrl;
+    var submitFn = function () {
+        var url = "<%=path%>/AjaxServlet";
+        var data = "";
+        if (submitData == data && submitUrl == url && cacheData != undefined) {
+            //拿cacheData做操作
+        } else {
+            $.ajax({
+                url: url,
+                type: 'get',
+                cache: true,
+                success: function (data) {
+                    //回调操作
+                    cacheData = data;
+                }}
+            );
+        }
+    }
+
+</script>
 </html>
