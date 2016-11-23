@@ -5,6 +5,7 @@ package main.exam;
  * @date 2016/11/23
  *
  * 使用共享机制与没有使用共享机制对比
+ * 备注：在jdk1.8中，有专门的注解@Contended来避免伪共享，更优雅地解决问题。
  */
 
 public class FalseSharing implements Runnable {
