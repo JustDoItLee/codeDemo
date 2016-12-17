@@ -27,6 +27,7 @@ import static com.alibaba.fastjson.JSON.DEFAULT_GENERATE_FEATURE;
 public class FastJsonUtils {
 
 	private FastJsonUtils() {
+
 	}
 
 	private static final Logger log = LoggerFactory.getLogger(FastJsonUtils.class);
