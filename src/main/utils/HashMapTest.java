@@ -62,4 +62,16 @@ public class HashMapTest <K,V>{
         return null;
     }
 
+    // 新增Entry。将“key-value”插入指定位置，bucketIndex是位置索引。
+    void addEntry(int hash, K key, V value, int bucketIndex) {
+        // 保存“bucketIndex”位置的值到“e”中
+        Entry<K, V> e = table[bucketIndex];
+        // 设置“bucketIndex”位置的元素为“新Entry”，
+        // 设置“e”为“新Entry的下一个节点”
+        table[bucketIndex] = new Entry<K, V>(hash, key, value, e);
+        // 若HashMap的实际大小 不小于 “阈值”，则调整HashMap的大小
+        if (size++ >= threshold)
+            resize(2 * table.length);
+    }
+
 }
