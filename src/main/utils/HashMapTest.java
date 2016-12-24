@@ -35,4 +35,31 @@ public class HashMapTest <K,V>{
         return null;
     }
 
+
+    // 将“key-value”添加到HashMap中
+    public V put(K key, V value) {
+        // 若“key为null”，则将该键值对添加到table[0]中。
+        if (key == null)
+            return putForNullKey(value);
+        // 若“key不为null”，则计算该key的哈希值，然后将其添加到该哈希值对应的链表中。
+        int hash = hash(key.hashCode());
+        int i = indexFor(hash, table.length);
+        for (Entry<K, V> e = table[i]; e != null; e = e.next) {
+            Object k;
+            // 若“该key”对应的键值对已经存在，则用新的value取代旧的value。然后退出！
+            if (e.hash == hash && ((k = e.key) == key || key.equals(k))) {
+                V oldValue = e.value;
+                e.value = value;
+                e.recordAccess(this);
+                return oldValue;
+            }
+        }
+
+        // 若“该key”对应的键值对不存在，则将“key-value”添加到table中
+        modCount++;
+        // 将key-value添加到table[i]处
+        addEntry(hash, key, value, i);
+        return null;
+    }
+
 }
