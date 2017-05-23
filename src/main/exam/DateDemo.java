@@ -8,8 +8,9 @@ import java.util.Date;
  */
 public class DateDemo {
     public static void main(String[] args) {
-        int i = 100000;
+       /* int i = 100000;
         Date date = new Date(i);
-        System.out.println(date);
+        System.out.println(date);*/
+//        System.out.println(new DateTime().toString("/yyyy/MM/dd"));
     }
 }
