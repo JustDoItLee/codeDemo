@@ -5,7 +5,7 @@
 public class Test04 {
     static int b = 0;
     public static void main(String[] args) {
-//        Test05 obj = null;
+//        Test06 obj = null;
 //        System.out.println(obj.foo());
         Integer i = 0 ;
         i += i > 0 ? i++ : i--;
